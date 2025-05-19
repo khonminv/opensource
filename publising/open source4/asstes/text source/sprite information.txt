@@ -1,0 +1,9 @@
+https://www.hanatour.com
+
+previous : background-position: -322px -143px;
+
+next : background-position: -359px -143px;
+
+pause : background-position: -395px -143px;
+
+play : background-position: -430px -143px;

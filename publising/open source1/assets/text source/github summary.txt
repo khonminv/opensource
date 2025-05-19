@@ -1,0 +1,97 @@
+HTML ::
+
+<div class="logo">
+	<h1><a href="">대상</a></h1>
+</div>
+
+GNB 하이라이트 시에 이미지 경로 변경을 위해서 IR 기법으로 스타일합니다.
+
+
+
+<div class="tab">
+	<a href="">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span class="blind">전체메뉴 열기</span>
+	</a>
+</div>
+
+
+.blind {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+blind 클래스는 접근성을 만드는 마크업입니다.
+
+
+
+<div class="dimmed"></div>
+
+모바일 메뉴가 활성화되면 하위 컨텐츠 클릭을 막기 위한 마크업입니다.
+
+
+
+CSS ::
+
+body.fixed {
+	overflow-y: hidden;
+}
+
+모바일에서 메뉴가 표시되면 스크롤 바를 표시하지 않는 스타일입니다.
+
+
+
+#header.fixed,
+#header.active {
+	background-color: #fff;
+}
+
+#header.fixed .logo a,
+#header.active .logo a {
+	background-image: url(../images/logo.png);
+}
+
+#header.fixed 클래스는 아래로 내려갔다가 올라올 경우 고정 클래스 스타일입니다.
+
+#header.active 클래스는 데스크탑에서 마우스 올렸을 경우 추가되는 클래스 스타일입니다.
+
+
+
+#header .dimmed.active {
+	display: block;
+}
+
+.dimmed.active 클래스는 모바일 메뉴가 활성화되면 하위 컨텐츠 클릭을 막기 위한 마크업입니다.
+
+
+
+#header nav.active {
+	right: 0;
+}
+
+nav.active 클래스는 모바일 메뉴 활성화 클래스입니다.
+
+
+
+#header nav > ul > li.active > a::after {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+li.active 클래스는 모바일 서브 메뉴 활성화 클래스입니다.
+
+
+
+JavaScript ::
+
+let isMobile;
+
+모바일과 데스크탑을 분기하는 블린 변수입니다.
+
+isMobile이 true이면 모바일이고, false이면 데스크탑입니다.
+
+기준 해상도는 780 해상도입니다.

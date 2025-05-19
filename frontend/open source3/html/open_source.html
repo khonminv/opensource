@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Layout Test</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap">
+<style>
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", "Noto Sans KR", sans-serif;
+	font-size: 1em;
+}
+.container {
+	margin: 0 auto;
+	padding: 125px 0 115px;
+	max-width: 1135px;
+}
+.title {
+	padding: 10px 0 15px;
+	text-align: center;
+}
+.title h2 {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+.product ul {
+	display: flex;
+	gap: 16px;
+	padding-top: 20px;
+}
+.product ul li {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: calc((100% - 48px)/4);
+}
+.product ul li a img {
+	width: 100%;
+}
+.product ul li .desc strong {
+	display: block;
+	font-size: 0.913em;
+	color: #444;
+}
+.product ul li .desc .discount {
+	display: inline-block;
+	margin-top: 15px;
+	font-size: 0.913em;
+	font-weight: 800;
+	color: #f32d10;
+}
+.product ul li .desc .dollar {
+	display: inline-block;
+	margin-left: 2px;
+	margin-top: 15px;
+	font-size: 0.913em;
+	font-weight: 800;
+	color: #444;
+}
+.product ul li .desc .won {
+	display: block;
+	margin-top: 6px;
+	font-size: 0.913em;
+	color: #666;
+}
+.controller {
+	margin-top: 30px;
+}
+.controller ul {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+.controller ul li a {
+	display: block;
+	width: 6px;
+	height: 6px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background-color: #ccc;
+	border-radius: 3px;
+}
+.controller ul li.on a {
+	width: 20px;
+	background-color: #333;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="title">
+		<h2>슬로우에이징을 위한 뷰티템 : 레티놀편</h2>
+	</div>
+	<div class="product">
+		<ul>
+			<li>
+				<a href="">
+					<div class="photo"><img src="images/product1.jpg" alt="product1"></div>
+					<div class="desc">
+						<strong>타나자나</strong>
+						<span class="discount">40%</span>
+						<span class="dollar">$24</span>
+						<span class="won">33,478원</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="photo"><img src="images/product2.jpg" alt="produce2"></div>
+					<div class="desc">
+						<strong>리쥬란</strong>
+						<span class="discount">40%</span>
+						<span class="dollar">$81</span>
+						<span class="won">113,019원</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="photo"><img src="images/product3.jpg" alt="produce3"></div>
+					<div class="desc">
+						<strong>유리프</strong>
+						<span class="discount">45%</span>
+						<span class="dollar">$9.9</span>
+						<span class="won">13,813원</span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="photo"><img src="images/product4.jpg" alt="produce4"></div>
+					<div class="desc">
+						<strong>바이오힐보</strong>
+						<span class="discount">45%</span>
+						<span class="dollar">$12</span>
+						<span class="won">16,743원</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="controller">
+		<ul>
+			<li class="on"><a href="">1</a></li>
+			<li><a href="">2</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
